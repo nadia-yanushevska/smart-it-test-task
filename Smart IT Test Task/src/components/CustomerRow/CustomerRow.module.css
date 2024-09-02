@@ -19,10 +19,13 @@
     .row {
         display: flex;
         gap: 8px;
-        font-size: 14px;
+        font-size: 13px;
+    }
+    .controls {
+        font-size: 11px;
     }
     .cell {
-        width: 120px;
+        width: 105px;
     }
 
     .cell:first-child {
@@ -36,14 +39,17 @@
     }
 
     .cell:nth-child(5) {
-        width: 80px;
+        width: 70px;
     }
 
     .cell:nth-child(6) {
-        width: 200px;
+        width: 190px;
     }
     .cell:nth-child(7) {
-        width: 110px;
+        width: 100px;
+    }
+    .cell:nth-child(8) {
+        width: 65px;
     }
 }
 

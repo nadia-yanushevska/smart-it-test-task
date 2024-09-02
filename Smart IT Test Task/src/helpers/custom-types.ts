@@ -12,3 +12,8 @@ export type CustomerProp = {
     person: Customer;
     includeHeader: boolean;
 };
+
+export type ButtonProp = {
+    text: string;
+    onClick: ()=>void
+};

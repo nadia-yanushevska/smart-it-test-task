@@ -7,6 +7,7 @@ import {
     phoneNumberFormatter,
 } from "../../helpers/formatter";
 import useMedia from "../../hooks/useMedia";
+import Button from "../Button/Button";
 
 function CustomerRow({
     person,
@@ -24,6 +25,7 @@ function CustomerRow({
                     <p className={s.cell}>{labelFormatter("date_of_birth")}</p>
                     <p className={s.cell}>{labelFormatter("user_email")}</p>
                     <p className={s.cell}>{labelFormatter("phone_number")}</p>
+                    <div className={s.cell}></div>
                 </li>
             ) : (
                 ""
@@ -61,6 +63,10 @@ function CustomerRow({
                 <p className={s.cell}>
                     {phoneNumberFormatter(person.phone_number)}
                 </p>
+                <div className={s.cell}>
+                    <Button text="Edit" onClick={() => {}} />
+                    <Button text="Delete" onClick={() => {}} />
+                </div>
             </li>
         </>
     );

@@ -9,6 +9,7 @@
   "author": "Nadiia Yanushevska",
   "license": "ISC",
   "dependencies": {
+    "clsx": "^2.1.1",
     "react-responsive": "^10.0.0"
   }
 }
