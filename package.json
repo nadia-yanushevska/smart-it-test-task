@@ -1,0 +1,14 @@
+{
+  "name": "smart-it-test-task",
+  "version": "1.0.0",
+  "description": "Test Task for Smart IT by Nadiia Yanushevska",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nadiia Yanushevska",
+  "license": "ISC",
+  "dependencies": {
+    "react-responsive": "^10.0.0"
+  }
+}
