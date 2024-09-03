@@ -1,13 +1,14 @@
 import React from "react";
-import customers_data from "../../../public/customers.json";
 import { Customer } from "../../helpers/custom-types";
 import CustomerRow from "../CustomerRow/CustomerRow";
 import s from "./CustomerTable.module.css";
+import { useSelector } from "react-redux";
+import { selectFilter } from "../../redux/customers/slice";
 
 type Customers = Customer[];
 function CustomerTable(): React.ReactElement {
-    const customers: Customers = customers_data;
-    console.log(customers);
+    const customers: Customers = useSelector(selectFilter);
+
     return (
         <ul className={s.table}>
             {customers.length > 0 ? (
@@ -20,7 +21,7 @@ function CustomerTable(): React.ReactElement {
                     );
                 })
             ) : (
-                <li className={s.single_item}>No customers available yet.</li>
+                <li className={s.single_item}>No customers available.</li>
             )}
         </ul>
     );

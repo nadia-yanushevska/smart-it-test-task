@@ -58,15 +58,15 @@
     .row,
     .header_row {
         display: flex;
-        gap: 8px;
-        padding: 8px;
+        gap: 16px;
+        padding: 8px 24px;
         border-radius: 10px;
     }
     .header_row {
         background-color: var(--green-color);
         color: var(--brown-color);
         font-family: "Merienda", cursive;
-        padding: 16px 8px;
+        padding: 16px 24px;
     }
     .cell_wrapper,
     .controls {
@@ -113,7 +113,7 @@
     .row,
     .header_row,
     .cell_wrapper {
-        gap: 16px;
+        gap: 24px;
     }
     .cell_wrapper,
     .controls {

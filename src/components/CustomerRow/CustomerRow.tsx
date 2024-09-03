@@ -7,7 +7,6 @@ import {
     phoneNumberFormatter,
 } from "../../helpers/formatter";
 import useMedia from "../../hooks/useMedia";
-import Button from "../Button/Button";
 import clsx from "clsx";
 
 function CustomerRow({
@@ -38,7 +37,7 @@ function CustomerRow({
                             {labelFormatter("phone_number")}
                         </p>
                     </div>
-                    <div className={s.cell}></div>
+                    {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
                 ""
@@ -65,6 +64,7 @@ function CustomerRow({
                             {labelFormatter("phone_number")}
                         </p>
                     </div>
+                    {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
                 ""
@@ -93,10 +93,10 @@ function CustomerRow({
                         {phoneNumberFormatter(person.phone_number)}
                     </p>
                 </div>
-                <div className={clsx(s.cell, s.controls)}>
+                {/* <div className={clsx(s.cell, s.controls)}>
                     <Button text="Edit" onClick={() => {}} />
                     <Button text="Delete" onClick={() => {}} />
-                </div>
+                </div> */}
             </li>
         </>
     );

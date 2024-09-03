@@ -13,7 +13,31 @@ export type CustomerProp = {
     includeHeader: boolean;
 };
 
+export type SearchProp = {
+    field: fieldNames;
+};
+
+export type fieldNames =
+    | "date_of_birth"
+    | "full_name"
+    | "avatar_url"
+    | "username"
+    | "user_email"
+    | "phone_number"
+    | "id";
+
+export type FilterPayload = {
+    value: string;
+    field: fieldNames;
+};
+
+export type InitialState = {
+    customers: Customer[];
+    filter: Customer[];
+    filterValues: FilterPayload[];
+};
+
 export type ButtonProp = {
     text: string;
-    onClick: ()=>void
+    onClick: () => void;
 };
