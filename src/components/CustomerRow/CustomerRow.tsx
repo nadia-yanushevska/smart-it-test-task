@@ -8,6 +8,7 @@ import {
 } from "../../helpers/formatter";
 import useMedia from "../../hooks/useMedia";
 import Button from "../Button/Button";
+import clsx from "clsx";
 
 function CustomerRow({
     person,
@@ -17,28 +18,53 @@ function CustomerRow({
     return (
         <>
             {includeHeader && !isMobile ? (
-                <li className={s.row}>
+                <li className={s.header_row}>
                     <p className={s.cell}>{labelFormatter("id")}</p>
                     <p className={s.cell}>{labelFormatter("avatar")}</p>
-                    <p className={s.cell}>{labelFormatter("username")}</p>
-                    <p className={s.cell}>{labelFormatter("full_name")}</p>
-                    <p className={s.cell}>{labelFormatter("date_of_birth")}</p>
+                    <div className={clsx(clsx(s.cell_wrapper, s.cell), s.cell)}>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("username")}
+                        </p>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("full_name")}
+                        </p>
+                    </div>
                     <p className={s.cell}>{labelFormatter("user_email")}</p>
-                    <p className={s.cell}>{labelFormatter("phone_number")}</p>
+                    <div className={clsx(s.cell_wrapper, s.cell)}>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("date_of_birth")}
+                        </p>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("phone_number")}
+                        </p>
+                    </div>
                     <div className={s.cell}></div>
                 </li>
             ) : (
                 ""
             )}
             {isMobile ? (
-                <li className={s.row}>
+                <li className={s.header_row}>
                     <p className={s.cell}>{labelFormatter("id")}</p>
                     <p className={s.cell}>{labelFormatter("avatar")}</p>
-                    <p className={s.cell}>{labelFormatter("username")}</p>
-                    <p className={s.cell}>{labelFormatter("full_name")}</p>
-                    <p className={s.cell}>{labelFormatter("date_of_birth")}</p>
+                    <div className={clsx(s.cell_wrapper, s.cell)}>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("username")}
+                        </p>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("full_name")}
+                        </p>
+                    </div>
                     <p className={s.cell}>{labelFormatter("user_email")}</p>
-                    <p className={s.cell}>{labelFormatter("phone_number")}</p>
+
+                    <div className={clsx(s.cell_wrapper, s.cell)}>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("date_of_birth")}
+                        </p>
+                        <p className={s.cell_inner}>
+                            {labelFormatter("phone_number")}
+                        </p>
+                    </div>
                 </li>
             ) : (
                 ""
@@ -54,16 +80,20 @@ function CustomerRow({
                         height={50}
                     />
                 </div>
-                <p className={s.cell}>{person.username}</p>
-                <p className={s.cell}>{person.full_name}</p>
-                <p className={s.cell}>
-                    {birthdayFormatter(person.date_of_birth)}
-                </p>
+                <div className={clsx(s.cell_wrapper, s.cell)}>
+                    <p className={s.cell_inner}>{person.username}</p>
+                    <p className={s.cell_inner}>{person.full_name}</p>
+                </div>
                 <p className={s.cell}>{person.user_email}</p>
-                <p className={s.cell}>
-                    {phoneNumberFormatter(person.phone_number)}
-                </p>
-                <div className={s.cell}>
+                <div className={clsx(s.cell_wrapper, s.cell)}>
+                    <p className={s.cell_inner}>
+                        {birthdayFormatter(person.date_of_birth)}
+                    </p>
+                    <p className={s.cell_inner}>
+                        {phoneNumberFormatter(person.phone_number)}
+                    </p>
+                </div>
+                <div className={clsx(s.cell, s.controls)}>
                     <Button text="Edit" onClick={() => {}} />
                     <Button text="Delete" onClick={() => {}} />
                 </div>

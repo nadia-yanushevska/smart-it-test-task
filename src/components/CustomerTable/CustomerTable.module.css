@@ -1,5 +1,14 @@
 .table {
     padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.single_item {
+    color: var(--dark-blue-color);
+    font-family: "Merienda", cursive;
+    padding: 16px 8px;
 }
 
 /* Mobile */

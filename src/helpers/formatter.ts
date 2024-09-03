@@ -9,6 +9,7 @@ export function phoneNumberFormatter(phone: string): string {
 export function labelFormatter(key: string): string {
     if (key === "id") return "ID";
     if (key === "date_of_birth") return "DOB";
+    if (key === "phone_number") return "Phone";
     return capitalizeWordsWithSeparator(key, "_", " ");
 }
 
