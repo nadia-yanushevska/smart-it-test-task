@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: start;
+    margin-bottom: 40px;
 }
 .single_item {
     color: var(--dark-blue-color);
@@ -22,6 +24,7 @@
 @media only screen and (min-width: 768px) {
     .table {
         font-size: 14px;
+        margin: 0px 12px 56px;
     }
 }
 

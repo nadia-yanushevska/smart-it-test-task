@@ -19,8 +19,8 @@ function App() {
         <>
             <h1>Our Customers</h1>
             <div className="search-fields-wrapper">
-                <SearchField field="name" />
                 <SearchField field="username" />
+                <SearchField field="name" />
                 <SearchField field="email" />
                 <SearchField field="phone" />
             </div>

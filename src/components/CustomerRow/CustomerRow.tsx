@@ -4,12 +4,14 @@ import s from "./CustomerRow.module.css";
 import { labelFormatter, phoneNumberFormatter } from "../../helpers/formatter";
 import useMedia from "../../hooks/useMedia";
 import clsx from "clsx";
+import { getClassListByCondition } from "../../helpers/classHelper";
 
 function CustomerRow({
     person,
     includeHeader,
 }: CustomerProp): React.ReactElement {
     const { isMobile } = useMedia();
+
     return (
         <>
             {includeHeader && !isMobile ? (
@@ -27,7 +29,9 @@ function CustomerRow({
                     <p className={clsx(s.cell, s.long)}>
                         {labelFormatter("email")}
                     </p>
-                    <p className={s.cell}>{labelFormatter("phone")}</p>
+                    <p className={clsx(s.cell, s.small_cell)}>
+                        {labelFormatter("phone")}
+                    </p>
                     {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
@@ -50,7 +54,9 @@ function CustomerRow({
                         {labelFormatter("email")}
                     </p>
 
-                    <p className={s.cell}>{labelFormatter("phone")}</p>
+                    <p className={clsx(s.cell, s.small_cell)}>
+                        {labelFormatter("phone")}
+                    </p>
                     {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
@@ -63,8 +69,20 @@ function CustomerRow({
                     <p className={s.inner_cell}>{person.website}</p>
                 </div>
                 <p className={s.cell}>{person.name}</p>
-                <p className={clsx(s.cell, s.long)}>{person.email}</p>
-                <p className={s.cell}>{phoneNumberFormatter(person.phone)}</p>
+                <p
+                    className={getClassListByCondition(
+                        [s.cell, s.long],
+                        s.cell_narrow,
+                        isMobile && person.email.length >= 20,
+                        s.cell_narrower,
+                        isMobile && person.email.length >= 23
+                    )}
+                >
+                    {person.email}
+                </p>
+                <p className={clsx(s.cell, s.small_cell)}>
+                    {phoneNumberFormatter(person.phone)}
+                </p>
                 {/* <div className={clsx(s.cell, s.controls)}>
                     <Button text="Edit" onClick={() => {}} />
                     <Button text="Delete" onClick={() => {}} />

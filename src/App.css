@@ -5,11 +5,20 @@
 }
 
 .search-fields-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
-    align-items: center;
     gap: 24px;
     margin-bottom: 36px;
-    padding: 24px;
+    padding: 16px 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .search-fields-wrapper {
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .search-fields-wrapper {
+        grid-template-columns: auto auto auto auto;
+    }
 }
