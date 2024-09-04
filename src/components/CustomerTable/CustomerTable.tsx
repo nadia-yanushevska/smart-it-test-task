@@ -17,6 +17,7 @@ function CustomerTable(): React.ReactElement {
                         <CustomerRow
                             person={customer}
                             includeHeader={idx === 0}
+                            key={idx}
                         />
                     );
                 })

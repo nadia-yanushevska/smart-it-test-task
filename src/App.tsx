@@ -19,10 +19,10 @@ function App() {
         <>
             <h1>Our Customers</h1>
             <div className="search-fields-wrapper">
-                <SearchField field="full_name" />
+                <SearchField field="name" />
                 <SearchField field="username" />
-                <SearchField field="user_email" />
-                <SearchField field="phone_number" />
+                <SearchField field="email" />
+                <SearchField field="phone" />
             </div>
             <CustomerTable />
         </>

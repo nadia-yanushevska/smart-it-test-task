@@ -1,7 +1,3 @@
-export function birthdayFormatter(full_date: string): string {
-    return full_date.split("T")[0];
-}
-
 export function phoneNumberFormatter(phone: string): string {
     phone = phone.split(".").join("-").split(") ").join("-").replace("(", "");
     phone = phone.split("-").length > 3 ? phone.slice(2) : phone;
@@ -10,8 +6,6 @@ export function phoneNumberFormatter(phone: string): string {
 
 export function labelFormatter(key: string): string {
     if (key === "id") return "ID";
-    if (key === "date_of_birth") return "DOB";
-    if (key === "phone_number") return "Phone";
     return capitalizeWordsWithSeparator(key, "_", " ");
 }
 
@@ -19,15 +13,13 @@ export function placeholderFormatter(key: string): string {
     switch (key) {
         case "id":
             return "0";
-        case "date_of_birth":
-            return "YYYY-MM-DD";
-        case "phone_number":
+        case "phone":
             return "012-345-6789";
         case "username":
             return "jane_doe2000";
-        case "user_email":
+        case "email":
             return "jane.doe@gmail.com";
-        case "full_name":
+        case "name":
             return "Jane Doe";
     }
     return "";

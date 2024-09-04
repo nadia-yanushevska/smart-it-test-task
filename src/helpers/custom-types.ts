@@ -1,11 +1,11 @@
 export type Customer = {
-    date_of_birth: string;
-    full_name: string;
+    name: string;
     avatar_url: string;
     username: string;
-    user_email: string;
-    phone_number: string;
+    email: string;
+    phone: string;
     id: string;
+    website: string
 };
 
 export type CustomerProp = {
@@ -17,14 +17,7 @@ export type SearchProp = {
     field: fieldNames;
 };
 
-export type fieldNames =
-    | "date_of_birth"
-    | "full_name"
-    | "avatar_url"
-    | "username"
-    | "user_email"
-    | "phone_number"
-    | "id";
+export type fieldNames = "name" | "website" | "username" | "email" | "phone" | "id";
 
 export type FilterPayload = {
     value: string;

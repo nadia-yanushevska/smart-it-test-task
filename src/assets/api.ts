@@ -1,8 +1,8 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://66d60d84f5859a7042683cdf.mockapi.io";
+axios.defaults.baseURL = "https://jsonplaceholder.typicode.com/";
 
 export function get_customers() {
-    const data = axios.get(`/Customer`);
+    const data = axios.get(`/users`);
     return data;
 }

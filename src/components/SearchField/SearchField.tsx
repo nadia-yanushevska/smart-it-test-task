@@ -6,6 +6,7 @@ import { SearchProp } from "../../helpers/custom-types";
 import { labelFormatter, placeholderFormatter } from "../../helpers/formatter";
 
 function SearchField({ field }: SearchProp) {
+    //TODO add value = filterValue; persistor?; label design and card labels in mobile change align, either add buttons and functionality (at least delete) or remove extra div-s, change api!!!
     const dispatch = useDispatch<AppDispatch>();
     return (
         <label className={s.label}>
