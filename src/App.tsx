@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { fetchCustomers } from "./redux/customers/operations";
 import { AppDispatch } from "./redux/store";
 import SearchField from "./components/SearchField/SearchField";
-
 function App() {
     //   const [count, setCount] = useState(0)
 

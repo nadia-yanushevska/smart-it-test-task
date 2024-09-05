@@ -5,7 +5,7 @@ export type Customer = {
     email: string;
     phone: string;
     id: string;
-    website: string
+    website: string;
 };
 
 export type CustomerProp = {
@@ -17,7 +17,13 @@ export type SearchProp = {
     field: fieldNames;
 };
 
-export type fieldNames = "name" | "website" | "username" | "email" | "phone" | "id";
+export type fieldNames =
+    | "name"
+    | "website"
+    | "username"
+    | "email"
+    | "phone"
+    | "id";
 
 export type FilterPayload = {
     value: string;
@@ -28,6 +34,8 @@ export type InitialState = {
     customers: Customer[];
     filter: Customer[];
     filterValues: FilterPayload[];
+    loading: boolean;
+    error: string;
 };
 
 export type ButtonProp = {

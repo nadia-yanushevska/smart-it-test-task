@@ -50,7 +50,7 @@
 
 <section id="setup">
     <h2>Quick Setup</h2>
-    <code>&#9888; Requires Node.js LTS version</code>
+    <p><code>&#9888; Requires Node.js LTS version</code></p>
     <ol>
         <li>Clone repository</li>
         <li>Run <code>npm i</code></li>

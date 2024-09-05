@@ -11,6 +11,8 @@
     color: var(--dark-blue-color);
     font-family: "Merienda", cursive;
     padding: 16px 8px;
+    text-align: center;
+    font-size: 20px;
 }
 
 /* Mobile */
