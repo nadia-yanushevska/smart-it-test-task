@@ -42,9 +42,9 @@
     <h2>Task</h2>
     <dl>
         <dt>Brief Task Description</dt>
-        <dd style="padding:none">Building a user management table that displays user information fetched from a mock API, along with implementing local filter functionality.</dd>
+        <dd style="padding:0px">Building a user management table that displays user information fetched from a mock API, along with implementing local filter functionality.</dd>
         <dt>Goal</dt>
-        <dd style="padding:none">Showcase skills in creating a React application using Redux Toolkit and TypeScript.</dd>
+        <dd style="padding:0px">Showcase skills in creating a React application using Redux Toolkit and TypeScript.</dd>
     </dl>
 </section>
 
