@@ -8,9 +8,9 @@
     <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About Customer Showcase</a></li>
-        <li style="padding:none"><a href="#technologies">Tech Stack</a></li>
+        <li><a href="#technologies">Tech Stack</a></li>
         <li><a href="#task">Task</a></li>
-        <li style="padding:none"><a href="#setup">Quick Setup</a></li>
+        <li><a href="#setup">Quick Setup</a></li>
     </ul>
 </section>
 
@@ -42,9 +42,9 @@
     <h2>Task</h2>
     <dl>
         <dt>Brief Task Description</dt>
-        <dd>Building a user management table that displays user information fetched from a mock API, along with implementing local filter functionality.</dd>
+        <dd style="padding:none">Building a user management table that displays user information fetched from a mock API, along with implementing local filter functionality.</dd>
         <dt>Goal</dt>
-        <dd>Showcase skills in creating a React application using Redux Toolkit and TypeScript.</dd>
+        <dd style="padding:none">Showcase skills in creating a React application using Redux Toolkit and TypeScript.</dd>
     </dl>
 </section>
 
