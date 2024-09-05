@@ -17,5 +17,5 @@
         Welcome to our customer showcase! Here, you can explore and
         browse through a diverse list of our valued clients.
     </p>
-    <img src="preview.png" alt="preview"/>
+    <img src="./preview.png" alt="preview"/>
 </section>
