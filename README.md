@@ -1,21 +1,21 @@
 <section>
     <h1>Customer Showcase - Smart IT Test Task</h1>
-    <h2>by Nadiia Yanushevska</h2>
-    <a href="https://smart-it-test-task.vercel.app/">Live Link</a>
+    <h3>by Nadiia Yanushevska</h3>
+    <h4>Demo Link: <a href="https://smart-it-test-task.vercel.app/">https://smart-it-test-task.vercel.app/</a></h4>
 </section>
 
 <section>
-    <h3>Table of Contents</h3>
+    <h2>Table of Contents</h2>
     <ul>
         <li><a href="#about">About Customer Showcase</a></li>
-        <li><a href="#technologies">Tech Stack</a></li>
-        <li><a href="#task">Task Description</a></li>
-        <li><a href="#setup">Quick Setup</a></li>
+        <li style="padding:none"><a href="#technologies">Tech Stack</a></li>
+        <li><a href="#task">Task</a></li>
+        <li style="padding:none"><a href="#setup">Quick Setup</a></li>
     </ul>
 </section>
 
 <section id="about">
-    <h3>About Customer Showcase</h3>
+    <h2>About Customer Showcase</h2>
     <p>
         Welcome to our Customer Showcase! Here, you can explore and browse through a diverse list of our valued clients.
     </p>
@@ -29,7 +29,7 @@
 </section>
 
 <section id="technologies">
-    <h3>Tech Stack</h3>
+    <h2>Tech Stack</h2>
     <ul>
         <li>React</li>
         <li>Redux</li>
@@ -39,7 +39,7 @@
 </section>
 
 <section id="task">
-    <h3>Task Description</h3>
+    <h2>Task</h2>
     <dl>
         <dt>Brief Task Description</dt>
         <dd>Building a user management table that displays user information fetched from a mock API, along with implementing local filter functionality.</dd>
@@ -49,8 +49,8 @@
 </section>
 
 <section id="setup">
-    <h3>Quick Setup</h3>
-    <p>&#9888; Requires Node.js LTS version</p>
+    <h2>Quick Setup</h2>
+    <code>&#9888; Requires Node.js LTS version</code>
     <ol>
         <li>Clone repository</li>
         <li>Run <code>npm i</code></li>
