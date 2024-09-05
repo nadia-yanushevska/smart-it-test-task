@@ -23,6 +23,7 @@
     }
 }
 
+/* Tablet */
 @media only screen and (min-width: 768px) {
     .table {
         font-size: 14px;
@@ -30,6 +31,7 @@
     }
 }
 
+/* Desktop */
 @media only screen and (min-width: 1024px) {
     .table {
         font-size: 16px;

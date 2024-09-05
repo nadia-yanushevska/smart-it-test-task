@@ -19,7 +19,7 @@
     <p>
         Welcome to our Customer Showcase! Here, you can explore and browse through a diverse list of our valued clients.
     </p>
-    <img src="./public/preview.png" alt="preview"/>    
+    <img src="/preview.png" alt="preview"/>    
     <p>
         Discover the customers table, featuring a beautifully designed and intuitive user-friendly interface for effortless data management.
     </p>

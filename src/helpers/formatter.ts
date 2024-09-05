@@ -1,3 +1,4 @@
+// Formatters
 export function phoneNumberFormatter(phone: string): string {
     phone = phone.split(".").join("-").split(") ").join("-").replace("(", "");
     phone = phone.split("-").length > 3 ? phone.slice(2) : phone;
@@ -25,6 +26,7 @@ export function placeholderFormatter(key: string): string {
     return "";
 }
 
+// Formatter helper functions
 function capitalizeWordsWithSeparator(
     words: string,
     initSeparator: string,

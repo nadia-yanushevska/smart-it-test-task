@@ -1,5 +1,5 @@
 import React from "react";
-import { Customer, FilterPayload } from "../../helpers/custom-types";
+import { Customer, FilterValue } from "../../helpers/custom-types";
 import CustomerRow from "../CustomerRow/CustomerRow";
 import s from "./CustomerTable.module.css";
 import { useSelector } from "react-redux";
@@ -16,7 +16,7 @@ type Customers = Customer[];
 function CustomerTable(): React.ReactElement {
     let customers: Customers = useSelector(selectCustomers);
     const filteredCustomers: Customers = useSelector(selectFilter);
-    const filterValues: FilterPayload[] = useSelector(selectFilterValues);
+    const filterValues: FilterValue[] = useSelector(selectFilterValues);
     const loading: boolean = useSelector(selectLoading);
     const error: string = useSelector(selectError);
 

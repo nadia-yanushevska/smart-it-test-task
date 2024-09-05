@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { fetchCustomers } from "./operations";
-import { InitialState, FilterPayload } from "../../helpers/custom-types";
+import { InitialState, FilterValue } from "../../helpers/custom-types";
 
 const initialState: InitialState = {
     customers: [],
@@ -21,7 +21,7 @@ export const slice = createSlice({
         selectError: (state) => state.error,
     },
     reducers: {
-        filterCustomers(state, { payload }: PayloadAction<FilterPayload>) {
+        filterCustomers(state, { payload }: PayloadAction<FilterValue>) {
             if (payload.value === "")
                 state.filterValues = state.filterValues.filter(
                     ({ field }) => field !== payload.field
@@ -47,7 +47,6 @@ export const slice = createSlice({
         builder
             .addCase(fetchCustomers.fulfilled, (state, { payload }) => {
                 state.customers = payload;
-                // state.filter = state.customers;
                 state.error = "";
                 state.loading = false;
             })

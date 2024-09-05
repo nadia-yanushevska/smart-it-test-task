@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux";
-import "./App.css";
-import CustomerTable from "./components/CustomerTable/CustomerTable";
 import { useEffect } from "react";
-import { fetchCustomers } from "./redux/customers/operations";
-import { AppDispatch } from "./redux/store";
-import SearchField from "./components/SearchField/SearchField";
-function App() {
-    //   const [count, setCount] = useState(0)
 
+import "./App.css";
+
+import { AppDispatch } from "./redux/store";
+import { fetchCustomers } from "./redux/customers/operations";
+
+import CustomerTable from "./components/CustomerTable/CustomerTable";
+import SearchField from "./components/SearchField/SearchField";
+
+function App() {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {

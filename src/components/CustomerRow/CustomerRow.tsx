@@ -1,15 +1,17 @@
 import React from "react";
-import { CustomerProp } from "../../helpers/custom-types";
-import s from "./CustomerRow.module.css";
-import { labelFormatter, phoneNumberFormatter } from "../../helpers/formatter";
-import useMedia from "../../hooks/useMedia";
 import clsx from "clsx";
+
+import s from "./CustomerRow.module.css";
+import useMedia from "../../hooks/useMedia";
+
 import { getClassListByCondition } from "../../helpers/classHelper";
+import { CustomerRowProp } from "../../helpers/custom-types";
+import { labelFormatter, phoneNumberFormatter } from "../../helpers/formatter";
 
 function CustomerRow({
     person,
     includeHeader,
-}: CustomerProp): React.ReactElement {
+}: CustomerRowProp): React.ReactElement {
     const { isMobile } = useMedia();
 
     return (
@@ -32,7 +34,6 @@ function CustomerRow({
                     <p className={clsx(s.cell, s.small_cell)}>
                         {labelFormatter("phone")}
                     </p>
-                    {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
                 ""
@@ -57,7 +58,6 @@ function CustomerRow({
                     <p className={clsx(s.cell, s.small_cell)}>
                         {labelFormatter("phone")}
                     </p>
-                    {/* <div className={s.cell}></div> */}
                 </li>
             ) : (
                 ""
@@ -83,10 +83,6 @@ function CustomerRow({
                 <p className={clsx(s.cell, s.small_cell)}>
                     {phoneNumberFormatter(person.phone)}
                 </p>
-                {/* <div className={clsx(s.cell, s.controls)}>
-                    <Button text="Edit" onClick={() => {}} />
-                    <Button text="Delete" onClick={() => {}} />
-                </div> */}
             </li>
         </>
     );

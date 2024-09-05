@@ -1,3 +1,14 @@
+// Prop types
+export type CustomerRowProp = {
+    person: Customer;
+    includeHeader: boolean;
+};
+
+export type SearchProp = {
+    field: fieldNames;
+};
+
+// Customer-related types
 export type Customer = {
     name: string;
     avatar_url: string;
@@ -8,15 +19,6 @@ export type Customer = {
     website: string;
 };
 
-export type CustomerProp = {
-    person: Customer;
-    includeHeader: boolean;
-};
-
-export type SearchProp = {
-    field: fieldNames;
-};
-
 export type fieldNames =
     | "name"
     | "website"
@@ -25,7 +27,8 @@ export type fieldNames =
     | "phone"
     | "id";
 
-export type FilterPayload = {
+// Redux types
+export type FilterValue = {
     value: string;
     field: fieldNames;
 };
@@ -33,12 +36,7 @@ export type FilterPayload = {
 export type InitialState = {
     customers: Customer[];
     filter: Customer[];
-    filterValues: FilterPayload[];
+    filterValues: FilterValue[];
     loading: boolean;
     error: string;
-};
-
-export type ButtonProp = {
-    text: string;
-    onClick: () => void;
 };
